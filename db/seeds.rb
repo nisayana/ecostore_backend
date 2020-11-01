@@ -7,6 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+Joiner.destroy_all
+Item.destroy_all
+Order.destroy_all
+User.destroy_all
+Category.destroy_all
+
+Joiner.reset_pk_sequence
+Item.reset_pk_sequence
+Order.reset_pk_sequence
+User.reset_pk_sequence
+Category.reset_pk_sequence
+
+
 sylwia = User.create(username: "Sylwia", email: "sylwia@gmail.com", password: "123")
 
 past_order = Order.create(order_status: true, user: sylwia)
