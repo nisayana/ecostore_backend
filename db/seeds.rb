@@ -20,10 +20,10 @@ User.reset_pk_sequence
 Category.reset_pk_sequence
 
 
-sylwia = User.create(username: "Sylwia", email: "sylwia@gmail.com", password: "123")
+anna = User.create(username: "Anna", email: "anna@gmail.com", password: "123")
 
-past_order = Order.create(order_status: true, user: sylwia)
-current_order = sylwia.orders.create(order_status: false)
+past_order = Order.create(order_status: true, user: anna)
+current_order = anna.orders.create(order_status: false)
 
 # CATEGORIES
 
@@ -33,31 +33,31 @@ office_yoga = Category.create(name: "Office Yoga", description: "Office Yoga is 
 
 # Private Claasses
 
-pc_mon = Item.create(name: "Monday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes)
-pc_tue = Item.create(name: "Tuesday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes)
-pc_wed = Item.create(name: "Wednesday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes)
-pc_thur = Item.create(name: "Thursday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes)
-pc_fri = Item.create(name: "Friday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes)
-pc_sat = Item.create(name: "Saturday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes)
-pc_sun = Item.create(name: "Sunday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes)
+pc_mon = Item.create(name: "Monday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes, price: 30)
+pc_tue = Item.create(name: "Tuesday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes, price: 30)
+pc_wed = Item.create(name: "Wednesday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes, price: 30)
+pc_thur = Item.create(name: "Thursday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes, price: 30)
+pc_fri = Item.create(name: "Friday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes, price: 30)
+pc_sat = Item.create(name: "Saturday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes, price: 30)
+pc_sun = Item.create(name: "Sunday", image: "https://beunewyork.com/wp-content/uploads/2019/10/private-yoga.jpg", category: private_classes, price: 30)
 
 # Online Classes
 
-oc_mon = Item.create(name: "Monday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes)
-oc_tue = Item.create(name: "Tuesday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes)
-oc_wed = Item.create(name: "Wednesday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes)
-oc_thur = Item.create(name: "Thursday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes)
-oc_fri = Item.create(name: "Friday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes)
-oc_sat = Item.create(name: "Saturday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes)
-oc_sun = Item.create(name: "Sunday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes)
+oc_mon = Item.create(name: "Monday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes, price: 15)
+oc_tue = Item.create(name: "Tuesday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes, price: 15)
+oc_wed = Item.create(name: "Wednesday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes, price: 15)
+oc_thur = Item.create(name: "Thursday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes, price: 15)
+oc_fri = Item.create(name: "Friday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes, price: 15)
+oc_sat = Item.create(name: "Saturday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes, price: 15)
+oc_sun = Item.create(name: "Sunday", image: "https://bikramyogales.com/wp-content/uploads/2019/09/Online-Yoga-Classes-from-Glo.png", category: online_classes, price: 15)
 
 # Office Yoga
 
-oy_mon = Item.create(name: "Monday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga)
-oy_tue = Item.create(name: "Tuesday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga)
-oy_wed = Item.create(name: "Wednesday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga)
-oy_thur = Item.create(name: "Thursday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga)
-oy_fri = Item.create(name: "Friday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga)
+oy_mon = Item.create(name: "Monday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga, price: 100)
+oy_tue = Item.create(name: "Tuesday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga, price: 100)
+oy_wed = Item.create(name: "Wednesday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga, price: 100)
+oy_thur = Item.create(name: "Thursday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga, price: 100)
+oy_fri = Item.create(name: "Friday", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg-f6bS-6ipwLGQxtFd76JtyBKIccxeivA8Q&usqp=CAU", category: office_yoga, price: 100)
 
 
 # Joiner

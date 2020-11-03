@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :authorized, only: [:persist]
+    before_action :authorized, only: [:keep_logged_in]
 
     def index 
         @users = User.all
@@ -22,9 +22,11 @@ class UsersController < ApplicationController
             }
         else
             render json: {error: "INVALID USER"}, status: 422
+        end
     end
 
     def login
+        
         @user = User.find_by(username: params[:username])
         if @user && @user.authenticate(params[:password])
             wristband_token = encode_token({user_id: @user.id})
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
         end
     end
 
-    def persist
+    def keep_logged_in
         # @user exists here because of the before_action
         wristband_token = encode_token({user_id: @user.id})
 
@@ -51,6 +53,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.permit(:username, :email, :password)
+        params.permit(:username, :password)
     end
 end

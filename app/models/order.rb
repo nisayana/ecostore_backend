@@ -3,4 +3,9 @@ class Order < ApplicationRecord
 
   has_many :joiners, :dependent => :destroy
   has_many :items, through: :joiners
+
+  def total
+    self.items.sum(:price)
+  end
+
 end
