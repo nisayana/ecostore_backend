@@ -6,7 +6,7 @@ class JoinersController < ApplicationController
     end
 
     def joiner_params
-        params.permit(:order_id, :item_id)
+        params.permit(:item_id, :order_id)
     end
 
 end
