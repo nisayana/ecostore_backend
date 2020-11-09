@@ -43,3 +43,5 @@ end
 gem 'jwt'
 gem 'active_model_serializers'
 gem 'activerecord-reset-pk-sequence'
+gem 'stripe'
+gem 'dotenv'

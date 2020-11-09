@@ -9,4 +9,10 @@ class JoinersController < ApplicationController
         params.permit(:item_id, :order_id)
     end
 
+    def destroy
+        joiner = Joiner.find(params[:id])
+        joiner.destroy
+        render json: {message: "Item has been deleted", joiner: joiner}
+    end
+
 end
