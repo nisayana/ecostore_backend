@@ -1,5 +1,16 @@
 class JoinersController < ApplicationController
 
+
+    def index
+        @joiners = Joiner.all
+        render json: @joiners
+    end 
+
+    def show
+        @joiner = Joiner.find(params[:id])
+        render json: @joiner
+    end
+
     def create
         joiner = Joiner.create(joiner_params)
         render json: joiner

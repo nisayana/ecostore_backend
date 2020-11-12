@@ -7,8 +7,7 @@ class OrdersController < ApplicationController
         render json: @orders
     end
 
-    def transform
-        # byebug changed checked_out attr to order_status
+    def transform 
         current_cart = @user.orders.find(params[:id])
         current_cart.update(order_status: true)
         new_cart = @user.orders.create(order_status: false)
