@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :categories
   resources :users
+  resources :reviews
 
   post '/login', to: "users#login"
   get '/keep_logged_in', to: "users#keep_logged_in"
