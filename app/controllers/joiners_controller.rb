@@ -16,8 +16,14 @@ class JoinersController < ApplicationController
         render json: joiner
     end
 
+    def update
+        @joiner = Joiner.find(params[:id])
+        @joiner.update(joiner_params)
+        render json: @joiner
+    end 
+
     def joiner_params
-        params.permit(:item_id, :order_id)
+        params.permit(:item_id, :order_id, :quantity)
     end
 
     def destroy

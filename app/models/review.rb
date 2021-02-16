@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :user
-  belongs_to :category
+  belongs_to :item
 
   def user_name
     self.user.username
