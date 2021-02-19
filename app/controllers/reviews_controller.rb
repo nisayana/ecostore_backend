@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     def create 
         
         @review = Review.create!(user_id: @user.id, item_id: params[:item_id], content: params[:content])
-        byebug
+        # byebug
         render json: @review
     end 
 
