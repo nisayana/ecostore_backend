@@ -9,5 +9,9 @@ class Joiner < ApplicationRecord
   def item_price
     self.item.price
   end
+
+  def item_image
+    self.item.image
+  end
   
 end
