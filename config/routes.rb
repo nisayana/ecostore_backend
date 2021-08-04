@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   resources :users
   resources :reviews
 
-  post '/login', to: "users#login"
-  get '/keep_logged_in', to: "users#keep_logged_in"
-  get '/profile', to: "users#profile"
-  get '/users/:id', to: "users#show"
-  patch '/orders/:id/transform', to: "orders#transform"
+  post '/login', to: 'users#login'
+  get '/keep_logged_in', to: 'users#keep_logged_in'
+  get '/profile', to: 'users#profile'
+  get '/users/:id', to: 'users#show'
+  patch '/users/:id', to: 'users#update'
+  patch '/orders/:id/transform', to: 'orders#transform'
   get 'charges/new'
   get 'charges/create'
   post '/charges', to: 'charges#create'

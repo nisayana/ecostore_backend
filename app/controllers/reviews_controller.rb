@@ -7,7 +7,6 @@ class ReviewsController < ApplicationController
     end 
 
     def create 
-        
         @review = Review.create!(user_id: @user.id, item_id: params[:item_id], content: params[:content])
         # byebug
         render json: @review
@@ -28,6 +27,6 @@ class ReviewsController < ApplicationController
     private 
 
     def review_params
-        params.permit(:item_id, :content)
+        params.permit(:item_id, :content, :rating)
     end 
 end

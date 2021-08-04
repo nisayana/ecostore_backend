@@ -29,7 +29,6 @@ current_order = anna.orders.create(order_status: false)
 
 home = Category.create(name: "Home & Kitchen", description: "Reduce your amount of waste with our Zero Waste Home & Kitchen products, from organic cotton reusable produce bags to plastic-free cleaning brushes and more.", image: "https://cdn.shopify.com/s/files/1/0203/1620/files/kitchenwareSP_copy_1440x961.jpg?v=1585861991v")
 bath_beauty = Category.create(name: "Bath & Beauty", description: "Reduce your amount of waste with our Zero Waste Bath & Beauty products, from sustainable bamboo toothbrushes to plastic-free hair care products and more.", image: "https://cdn.shopify.com/s/files/1/0235/9128/8912/products/image_358315c8-fce4-4401-8fd3-1640756618c0_480x480.jpg?v=1605670805")
-# office_yoga = Category.create(name: "Office Yoga", description: "Office Yoga is the perfect antidote to workday stress and postural / muscular problems that can arise due to long hours spent at a desk. ... Unlike standard yoga lessons, my classes are designed to address the specific physical and mental challenges that desk workers tend to encounter.", image: "https://res.cloudinary.com/dv588hi0a/image/upload/v1605136027/samples/20180828_190420_IMG_5614_uz7mow.jpg")
 
 # Home
 
@@ -38,8 +37,7 @@ coffee_filter = Item.create(name: "Coffee Filter", image: "https://res-console.c
 natural_loofah = Item.create(name: "Natural Loofah", image: "https://res-console.cloudinary.com/dv588hi0a/thumbnails/v1/image/upload/v1612814419/c2FtcGxlcy9uYXR1cmFsX2xvb2ZhaF9sZXd1ZGU=/preview", overview: "Say goodbye to plastic sponges with this plant-fiber natural loofah. A great plastic-free alternative for scrubbing and cleaning your dishes or for any general cleaning around your house. Our natural loofah can be used also for mild body exfoliation or to massage your skin as you bathe. It works great for dry skin and rough spots! Loofah is a fiber from the cucumber family, is a very sustainable and effective cleaning product.", category: home, price: 3)
 dish_brush = Item.create(name: "Dish Brush", image: "https://res-console.cloudinary.com/dv588hi0a/thumbnails/v1/image/upload/v1612814418/c2FtcGxlcy9kaXNoX2JydXNoX2plaGh2cg==/preview", overview: "Scrub your dishes without plastic! This dish scrubber has a natural beechwood handle and the bristles are made of union fibers (derived from hard Mexican plant fiber). Stiff but flexible union fibers are designed to handle heavy-duty cleaning. Good for scrubbing out stains on a variety of surfaces. Safe to use in boiling water, perfect for cleaning pots, dishes, and pans. Because of his durable design, this pot brush can also be used for just about any cleaning or scrubbing purposes in your home.", category: home, price: 30)
 steel_cup = Item.create(name: "Stainless Steel Cup", image: "https://res-console.cloudinary.com/dv588hi0a/thumbnails/v1/image/upload/v1612814420/c2FtcGxlcy9zdGVlbF9jdXBfenZwcWsw/preview", overview: "This Stainless Steel Cup with Carabiner Handle is a great zero waste accessory for outdoor lovers, a must-have plastic-free on the go essential for hiking, camping, climbing or backpacking. This cup is strong, impact-resistant, reusable and made from 100% 304 food-grade stainless steel which is a recyclable material.", category: home, price: 8)
-# pc_sat = Item.create(name: "Saturday", category: home, price: 30)
-# pc_sun = Item.create(name: "Sunday", category: home, price: 30)
+
 
 # Bath & beauty
 
