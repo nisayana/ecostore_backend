@@ -20,7 +20,7 @@ User.reset_pk_sequence
 Category.reset_pk_sequence
 
 
-anna = User.create(username: "Anna", email: "anna@gmail.com", password: "123", first_name: "Anna", last_name: "Smith", address: "100 1st Ave, New York, NY 10009")
+anna = User.create(username: "Anna", email: "anna@gmail.com", password: "123", first_name: "Anna", last_name: "Smith", address: "100 1st Ave", city: "New York", state: "NY", zip: 10009)
 
 past_order = Order.create(order_status: true, user: anna)
 current_order = anna.orders.create(order_status: false)
