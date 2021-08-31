@@ -13,5 +13,9 @@ class Joiner < ApplicationRecord
   def item_image
     self.item.image
   end
+
+  # def item_quantity
+  #   self.item.quantity
+  # end
   
 end
